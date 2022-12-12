@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="helps">
+    <p class="num1">Число</p>
+    <p class="sign">Знак</p>
+    <p class="num2">Число</p>
+  </div>
+  <div class="container">
+    <div class="calculator">
+      <input type="number" placeholder="'num'" class="input-1">
+      <input type="text" placeholder="'sign'" id="sign">
+      <input type="number" placeholder="'num'" class="input-2">
+    </div>
+    <div class="btns">
+      <button class="calcbtn-clear">Clear</button>
+      <button class="calcbtn-result">Result</button>
+    </div>
+  </div>
+  <div class="helpBar">
+    <button class="helpBarBtn">Помощь</button>
+    <div class="helpBarMenu">
+      <p class="titleHelpBar">Знаки "sign" которые можно использовать</p>
+      <ul type="none">
+        <li class="helpBarItem">+ || Сложение</li>
+        <br>
+        <li class="helpBarItem">- || Вычитание</li>
+        <br>
+        <li class="helpBarItem">/ || Деление</li>
+        <br>
+        <li class="helpBarItem">* || Умножение</li>
+        <br>
+        <li class="helpBarItem">% || Взятие остатка от деления</li>
+        <br>
+        <li class="helpBarItem">** || Возведение в степень</li>
+      </ul>
+    </div>
+  </div>
+  <div class="result">0</div>
+  <div class="box"></div>
+  <div class="scrimer"><img src="/img/hqdefault.jpg" class="imgScrimer"></div>
+  <script src="app.js"></script>
+</body>
+</html>

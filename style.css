@@ -1,0 +1,206 @@
+
+/* Убирание стрелок в инпуте */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ------------------------------------------------- */
+
+body {
+  background-color: #191919;
+  font-family: arial;
+  font-weight: 700;
+}
+
+.helps {
+  display: flex;
+  color: #fff;
+  margin-top: 120px;
+  justify-content: center;
+  gap: 70px;
+}
+
+.container {
+  z-index: 2;
+  position: relative;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  height: 70px;
+  border: none;
+  font-weight: 30px;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 0 0 10px #fff;
+}
+
+input[type="number"] {
+  width: 120px;
+  border: none;
+  outline: none;
+}
+
+input[type="text"] {
+  width: 90px;
+  outline: none;
+}
+
+.input-1 {
+  border-radius: 8px 0 0 8px;
+}
+
+.input-2 {
+  border-radius: 0 8px 8px 0;
+}
+
+.box {
+  position: absolute;
+  box-shadow: 0 0 10px #fff;
+  width: 50%;
+  height: 244px;
+  top: 100px;
+  left: 25%;
+  z-index: 0;
+  animation: shadow infinite 3s;
+  border-radius: 5px;
+}
+
+@keyframes shadow {
+  0% {
+  box-shadow: 0 0 3px rgb(255, 0, 0);
+  }
+  20% {
+  box-shadow: 0 0 3px rgb(242, 255, 0);
+  }
+  60% {
+  box-shadow: 0 0 3px rgb(0, 255, 8);
+  }
+  80% {
+  box-shadow: 0 0 3px rgb(0, 0, 255);
+  }
+  100%{
+  box-shadow: 0 0 3px rgb(255, 0, 195);
+  }
+}
+
+.btns {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  box-shadow: 0 0 10px #fff;
+  border: 0;
+  border-radius: 8px;
+  width: 120px;
+  height: 30px;
+  transition: 0.25s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+
+button:hover {
+  box-shadow: 0 0 10px orange;
+  background: rgb(255, 211, 117);
+  box-shadow: 0 0 15px orange;
+  scale: 1.05;
+}
+
+button:active {
+  scale: 0.95;
+}
+
+.result {
+  position: relative;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  top: -190px;
+  display: flex;
+  justify-content: center;
+}
+
+.helpBar {
+  position: absolute;
+  height: 244px;
+  width: 50%;
+  top: 370px;
+  left: 25%;
+}
+
+.helpBarBtn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 0.1s;
+}
+
+.helpBarBtn:hover {
+  scale: 1;
+  width: 130px;
+}
+
+.helpBarBtn:active {
+  scale: 1;
+  width: 120px;
+}
+
+.helpBarMenu {
+  display: none;
+  position: relative;
+  top: -38px;
+  width: 100%;
+  height: 105%;
+  background-color: #191919;
+  animation: shadow infinite 3s;
+  border-radius: 5px;
+  transition: 1s;
+  color: rgb(176, 176, 176);
+}
+.helpBarMenu.active {
+  display: block;
+  margin-top: 90px;
+  transition: 1s;
+}
+
+.titleHelpBar {
+  color: #fff;
+  text-align: center;
+}
+
+.helpBarItem:before {
+  content: '|| ';
+}
+
+.scrimer {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.imgScrimer {
+  position: static;
+  height: 100%;
+  width: 100%;
+}
+
+.scrimer.active {
+  display: block;
+}
